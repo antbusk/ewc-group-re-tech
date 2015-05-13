@@ -1,0 +1,220 @@
+application: ewc-group-re-tech
+version: 2
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /(.+\.php)
+  script: \1
+
+- url: /pubnub(.+\.php)
+  script: pubnub/\1
+  
+- url: /ScriptCam-master(.+\.htm)
+  script: ScriptCam-master/\1
+
+- url: /ScriptCam-master/static
+  static_dir: ScriptCam-master/static
+  expiration: "0d 2m"
+  
+- url: / 
+  script: login.php
+
+ 
+ 
+- url: /phone/login\.php
+  script: phone/login.php
+  
+- url: /hdd_videos\.php
+  script: hdd_videos.php  
+  
+- url: /hdd_shred_video\.php
+  script: hdd_shred_video.php
+
+- url: /delete_video\.php
+  script: delete_video.php 
+
+- url: /ajax_videos\.php
+  script: ajax_videos.php
+
+- url: /videos_update_order\.php
+  script: videos_update_order.php
+
+- url: /video_url\.php
+  script: video_url.php  
+  
+- url: /product_attributes\.php
+  script: product_attributes.php  
+  
+  
+- url: /db\.php
+  script: db.php  
+  
+- url: /photos_update_order\.php
+  script: photos_update_order.php
+
+- url: /phone/upload_handeler\.php
+  script: phone/upload_handeler.php
+  
+- url: /phone/upload_url\.php
+  script: phone/upload_url.php
+  
+- url: /sales_channal_api/ebay/AddItem\.php
+  script: sales_channal_api/ebay/AddItem.php
+
+- url: /webcam_pic/index\.php
+  script: webcam_pic/index.php
+  
+- url: /ebay_other_list\.php
+  script: ebay_other_list.php
+
+- url: /website_categories\.php
+  script: website_categories.php
+
+- url: /ebay_laptop_list.php\.php
+  script: ebay_laptop_list.php
+  
+- url: /upload_url\.php
+  script: upload_url.php
+
+- url: /cell_photos\.php
+  script: cell_photos.php
+
+- url: /photos_seconed_screen\.php
+  script: photos_seconed_screen.php
+  
+- url: /delete_photo\.php
+  script: delete_photo.php
+
+- url: /webcam_pic/upload\.php
+  script: webcam_pic/upload.php
+
+- url: /sales_channal_api/ebay/GetOrders\.php
+  script: sales_channal_api/ebay/GetOrders.php
+
+- url: /sales_channal_api/ebay/view\.php
+  script: sales_channal_api/ebay/view.php
+
+- url: /sales_channal_api/ebay/get-common/eBaySession\.php
+  script: sales_channal_api/ebay/get-common/eBaySession.php
+  
+- url: /sales_channal_api/ebay/get-common/keys\.php
+  script: sales_channal_api/ebay/get-common/keys.php
+  
+- url: /sales_channal_api/ebay/eBaySession\.php
+  script: sales_channal_api/ebay/eBaySession.php
+  
+- url: /sales_channal_api/ebay/keys\.php
+  script: sales_channal_api/ebay/keys.php
+
+- url: /pubnub\.php
+  script: pubnub.php
+
+  
+- url: /outgoing\.php
+  script: outgoing.php
+
+- url: /sku\.php
+  script: sku.php
+
+- url: /sku_search\.php
+  script: sku_search.php
+  
+- url: /login\.php
+  script: login.php
+  
+- url: /harddrives\.php
+  script: harddrives.php
+  
+- url: /test\.php
+  script: test.php
+  
+- url: /register\.php
+  script: register.php
+
+- url: /products\.php
+  script: products.php
+  
+- url: /shelf\.php
+  script: shelf.php
+
+- url: /clients\.php
+  script: clients.php
+  
+- url: /product_types\.php
+  script: product_types.php
+  
+- url: /listings\.php
+  script: listings.php
+  
+- url: /add_to_shelf\.php
+  script: add_to_shelf.php
+
+- url: /add_to_shelf_step_2\.php
+  script: add_to_shelf_step_2.php
+  
+- url: /product_to_listings\.php
+  script: product_to_listings.php
+ 
+- url: /product_to_listings_results\.php
+  script: product_to_listings_results.php
+  
+- url: /includes/barcode_img\.php
+  script: includes/barcode_img.php
+
+- url: /includes/barCode\.php
+  script: includes/barCode.php
+ 
+- url: /includes/shelfBarCode\.php
+  script: includes/shelfBarCode.php
+  
+- url: /search_products\.php
+  script: search_products.php
+
+- url: /listing_inventory_audit\.php
+  script: listing_inventory_audit.php
+  
+  
+- url: /upload\.php
+  script: upload.php
+  
+- url: /photo_url\.php
+  script: photo_url.php
+  
+- url: /ajax_photos\.php
+  script: ajax_photos.php
+  
+- url: /upload_handeler\.php
+  script: upload_handeler.php
+  
+- url: /bootstrap_3
+  static_dir: bootstrap_3
+  expiration: "1d 0m"
+
+- url: /webcam_pic/static
+  static_dir: webcam_pic/static
+  expiration: "0d 2m"
+  
+- url: /includes/images
+  static_dir: includes/images
+  expiration: "1d 0m"
+
+  
+- url: /bootstrap_3/fonts/(.*\.woff)
+  static_files: bootstrap_3/fonts/\1
+  upload: bootstrap_3/fonts/(.*\.woff)
+  http_headers:
+   Content-Type: application/font-woff
+
+- url: /bootstrap_3/fonts/(.*\.svg)
+  static_files: bootstrap_3/fonts/\1
+  upload: bootstrap_3/fonts/(.*\.svg)
+  http_headers:
+   Content-Type: image/svg+xml
+
+
+- url: /bootstrap_3/fonts/(.*\.eot)
+  static_files: bootstrap_3/fonts/\1
+  upload: bootstrap_3/fonts/(.*\.eot)
+  http_headers:
+   Content-Type: application/vnd.ms-fontobject

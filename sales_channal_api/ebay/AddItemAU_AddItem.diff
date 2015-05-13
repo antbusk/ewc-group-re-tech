@@ -1,0 +1,40 @@
+C:\>diff AddItem.php AddItemAU.php
+10c10
+< <FORM action="AddItem.php" method="post">
+---
+> <FORM action="AddItemAU.php" method="post">
+27,31c27,28
+<           <option value="14111">Test Category</option>
+<             <option value="57889">Boys Athletic Pants</option>
+<             <option value="57890">Boys Corduroys Pants</option>
+<             <option value="57891">Boys Jeans Pants</option>
+<             <option value="57892">Boys Khakis Pants</option>
+---
+>             <option value="37559">Test Category</option>
+>             <option value="128334">Jeans & Pants</option>>
+99c96
+<               $siteID = 0;
+---
+>               $siteID = 15;
+111c108
+<               $requestXmlBody .= '<Site>US</Site>';
+---
+>               $requestXmlBody .= '<Site>Australia</Site>';
+115,117c112,114
+<               $requestXmlBody .= "<BuyItNowPrice currencyID=\"USD\">$buyItNowPrice</BuyItNowPrice>";
+<               $requestXmlBody .= '<Country>US</Country>';
+<               $requestXmlBody .= '<Currency>USD</Currency>';
+---
+>               $requestXmlBody .= "<BuyItNowPrice currencyID=\"AUD\">$buyItNowPrice</BuyItNowPrice>";
+>               $requestXmlBody .= '<Country>AU</Country>';
+>               $requestXmlBody .= '<Currency>AUD</Currency>';
+120c117
+<               $requestXmlBody .= '<Location><![CDATA[San Jose, CA]]></Location>';
+---
+>               $requestXmlBody .= '<Location><![CDATA[Sydney]]></Location>';
+177c174
+<               $linkBase = "http://cgi.sandbox.ebay.com/ws/eBayISAPI.dll?ViewItem&item=";
+---
+>               $linkBase = "http://cgi.sandbox.ebay.com.au/ws/eBayISAPI.dll?ViewItem&item=";
+
+C:\>
