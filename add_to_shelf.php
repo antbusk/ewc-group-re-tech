@@ -3,8 +3,9 @@ require("login_check.php");
 
 
 echo $header;	
-
+///// login check
 ?>
+
 
 <div class="row">
 <div class="col-sm-12">
