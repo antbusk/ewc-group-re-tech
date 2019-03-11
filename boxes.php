@@ -34,7 +34,7 @@ if (!$result1) {
 
 $_SESSION['last_insert']= mysql_insert_id();
 
-}   // insert end helllo
+}   // insert end helllo world
  
  
  
