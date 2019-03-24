@@ -1,5 +1,5 @@
-application: ewc-group-re-tech
-version: 2
+application: mysql-idle
+version: 1
 runtime: php55
 api_version: 1
 
